@@ -10,8 +10,10 @@ def get_filters():
     """
     Returns filters from the following functions:
         get_city() - asks user to enter name of the city to analyze
-        get_month() - asks user to enter name of the month to filter by, or "all" to apply no month filter
-        get_day() - asks user to enter name of the day of week to filter by, or "all" to apply no day filter
+        get_month() - asks user to enter name of the month to filter by, or
+        "all" to apply no month filter
+        get_day() - asks user to enter name of the day of week to filter by, or
+         "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     city = get_city()
@@ -40,7 +42,8 @@ def get_city():
 
 def get_month():
     """
-    Asks user to enter the name of the month to analyze, or "all" to apply no month filter.
+    Asks user to enter the name of the month to analyze, or "all" to apply no
+    month filter.
     Returns name of the month to analyze or "all".
     """
     month_list = ['All', 'January', 'February', 'March', 'April', 'May', 'June']
@@ -58,7 +61,8 @@ def get_month():
 
 def get_day():
     """
-    Asks user to enter the name of the day of the week to analyze, or "all" to apply no day filter.
+    Asks user to enter the name of the day of the week to analyze, or "all" to
+    apply no day filter.
     Returns name of the day to analyze or "all".
     """
     day_list = ['All', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
@@ -76,12 +80,14 @@ def get_day():
 
 def load_data(city, month, day):
     """
-    Loads data for the specified city and filters by month and day if applicable.
+    Loads data for the specified city and filters by month and day.
 
     Args:
         (str) city - name of the city to analyze
-        (str) month - name of the month to filter by, or "all" to apply no month filter
-        (str) day - name of the day of week to filter by, or "all" to apply no day filter
+        (str) month - name of the month to filter by, or "all" to apply no month
+         filter
+        (str) day - name of the day of week to filter by, or "all" to apply no
+        day filter
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
@@ -157,10 +163,13 @@ def trip_duration_stats(df):
 def user_stats(df, city):
     """
     Displays statistics on bikeshare user type.
-    Displays statistics on bikeshare user genders for cities other than Washington.
-    Displays statistics on bikeshare user birth years for cities other than Washington.
+    Displays statistics on bikeshare user genders for cities other than
+    Washington.
+    Displays statistics on bikeshare user birth years for cities other than
+    Washington.
     Args:
-        (DataFrame) df - Pandas DataFrame containing city data filtered by month and day
+        (DataFrame) df - Pandas DataFrame containing city data filtered by month
+         and day
         (str) city - city as selected by user
     """
     print('\nCalculating User Stats...\n')
