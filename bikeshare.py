@@ -88,7 +88,6 @@ def load_data(city, month, day):
     filename = ({}.csv).format(city)
     df = pd.read_csv(filename)
     df['Start Time'] = pd.to_datetime(df['Start Time'])
-    df['End Time'] = pd.to_datetime(df['End Time'])
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.weekday_name
     if month != 'All':
