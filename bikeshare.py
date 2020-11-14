@@ -85,12 +85,7 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-    if city == 'Chicago':
-        filename = 'chicago.csv'
-    elif city == 'New York City':
-        filename = 'new_york_city.csv'
-    else:
-        filename = 'washington.csv'
+    filename = ({}.csv).format(city)
     df = pd.read_csv(filename)
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['End Time'] = pd.to_datetime(df['End Time'])
