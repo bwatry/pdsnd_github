@@ -49,7 +49,8 @@ def get_month():
         try:
             month = input('Type \'all\' or a month between January and June: ').title()
             if month not in month_list:
-                print('Oops! Please type \'all\' or a month between January and June.')
+                print('Oops! Please type \'all\' or a month between January and
+                      June.')
         except:
             continue
         print(('You have chosen: {}').format(month))
@@ -61,7 +62,8 @@ def get_day():
     Asks user to enter the name of the day of the week to analyze, or "all" to apply no day filter.
     Returns name of the day to analyze or "all".
     """
-    day_list = ['All', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+    day_list = ['All', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday',
+                'Friday', 'Saturday']
     day = None
     while day not in day_list:
         try:
