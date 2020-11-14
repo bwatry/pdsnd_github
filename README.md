@@ -5,7 +5,12 @@
 ### **Bikeshare Project**
 
 ### Description
-This project takes bikeshare data from three cities (Chicago, New York City, and Washington) and creates an interactive database. Users can input variables to view start and end times and stations as well as bikeshare customer demographics.
+This project takes bikeshare data from three cities (Chicago, New York City, and Washington) and creates an interactive database. Users input variables to:
+* view start and end times
+* view start and end stations
+* view bikeshare customer demographics
+* analyze popular times/trips/customer data
+* view all data
 
 ### Files used
 * Data Files
