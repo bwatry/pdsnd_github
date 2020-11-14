@@ -52,7 +52,8 @@ def get_month():
         try:
             month = input('Type \'all\' or a month between January and June: ').title()
             if month not in month_list:
-                print('Oops! Please type \'all\' or a month between January and June.')
+                print('Oops! Please type \'all\' or a month between January and
+                      June.')
         except:
             continue
         print(('You have chosen: {}').format(month))
@@ -65,7 +66,8 @@ def get_day():
     apply no day filter.
     Returns name of the day to analyze or "all".
     """
-    day_list = ['All', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+    day_list = ['All', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday',
+                'Friday', 'Saturday']
     day = None
     while day not in day_list:
         try:
@@ -91,15 +93,9 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-    if city == 'Chicago':
-        filename = 'chicago.csv'
-    elif city == 'New York City':
-        filename = 'new_york_city.csv'
-    else:
-        filename = 'washington.csv'
+    filename = ({}.csv).format(city)
     df = pd.read_csv(filename)
     df['Start Time'] = pd.to_datetime(df['Start Time'])
-    df['End Time'] = pd.to_datetime(df['End Time'])
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.weekday_name
     if month != 'All':
