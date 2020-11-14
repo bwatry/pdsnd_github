@@ -203,6 +203,12 @@ def view_data(df):
 
 
 def main():
+    """
+    Runs the above fuctions using variables from get_filters() and data from
+    DataFrame.
+    Asks user whether they want to start again.
+    Ends otherwise.
+    """
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
